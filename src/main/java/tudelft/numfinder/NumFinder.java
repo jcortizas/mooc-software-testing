@@ -4,12 +4,13 @@ public class NumFinder {
     private int smallest = Integer.MAX_VALUE;
     private int largest = Integer.MIN_VALUE;
 
-    public void find(int[] nums) {
-        for(int n : nums) {
-
-            if(n < smallest)
+    public void find(int[] nums) throws Exception {
+        smallest = Integer.MAX_VALUE;
+        largest = Integer.MIN_VALUE;
+        for (int n : nums) {
+            if (n < smallest)
                 smallest = n;
-            else if (n > largest)
+            if (n > largest)
                 largest = n;
 
         }
